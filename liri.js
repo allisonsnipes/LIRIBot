@@ -58,6 +58,11 @@ runCommand(userInput, userInputQuery);
 
 //function for concertThis
 function concertThis() {
+  //template literal to help display data
   console.log(`\n - - - - - \n\n ${userInputQuery}'s next concert is: `);
+  //use request here as a query url with the specified parameters from docs and userInputQuery
+  request("https://rest.bandsintown.com/artist/" + userInputQuery + "/events?app_id=" + bandsintown, function (error, response, body) {
+    
+  } )
   
 }
