@@ -8,7 +8,11 @@ var keys = require("./keys.js");//need keys
 //require spotify api packages
 //doesnt matter to use var/const/let use let or const
 var Spotify = require("node-spotify-api");
-var spotify = new Spotify("keys.spotify");
+var spotify = new Spotify({
+    id: keys.spotify.id,
+    secret: keys.spotify.secret
+  });
+
 
 
 //be able to take in user input to get needed info
@@ -19,24 +23,26 @@ var query = process.argv.slice(3).join(" ") //word to look unp
 //switch statement used to perform diferent actions based on different conditions
 //userInput is hardcoded set commands to run the function and the inputUserQuery is random input from user
 //function for command
-
-switch (action) {
-  case "concert-this":
-    concertThis(query);
-    break;
-  case "spotify-this":
-    spotifyThisSong(query);
-    break;
-  case "movie-this":
-    movieThis(query);
-    break;
-  case "do-this":
-    doThis(query);
-    break;
-  default:
-    console.log("Please search another term");
-    break;
+function commands(action, query) {
+  switch (action) {
+    case "concert-this":
+      concertThis(query);
+      break;
+    case "spotify-this":
+      spotifyThisSong(query);
+      break;
+    case "movie-this":
+      movieThis(query);
+      break;
+    case "do-this":
+      doThis(query);
+      break;
+    default:
+      console.log("Please search another term");
+      break;
+  }
 }
+commands(action, query);
 
 //function for concertThis
 function concertThis() {
@@ -76,29 +82,38 @@ function movieThis() {
  }
 
 function spotifyThisSong() {
-  console.log("searching spotify for songs");
+  console.log(`searching spotify for ${query}`);
+
   spotify.search({
     type: 'track',
-    query: query,
-    limit: 1
-  }, function (err, response) {
-    if (err) {
-      console.log('Error occurred: ' + err);
-      return;
+    query: query
+  }), function (err, response){
+    if (error) {
+      console.log("error occured: " + err)
     }
-    let dataArr = response.tracks.items;
-
-    for (i = 0; i < dataArr.length; i++) {
+      var arr = response.tracks.items;
+      
+      for (i = 0; i < arr.length; i++) {
       console.log("----");
-      console.log(`artist: ${response.tracks.items[i].album.artists[0].name}`);
-      console.log(`song: ${response.tracks.items[i].name}`);
-      console.log(`album: ${response.tracks.items[i].album.name}`);
-      console.log(`spotify link: ${response.tracks.items[i].external_urls.spotify}`);
+      console.log(`artist: ${song.artists[0].name}`);
+      console.log(`song: ${song.name}`);
+      console.log(`album: ${song.album.name}`);
+      console.log(`spotify link: ${song.preview_url}`);
       console.log("----"); 
     }
+  }
+};
 
+//need to access random.txt file
+function doThis() {
+  fs.readFile("random.txt", "utf8", function (err, response) {
+    if (err) {
+      console.log(err);
+    }
+    var dArray = data.split(",");
+    var action = dArray[0]; //take objects from txt file to use as parameters
+    var query = dArray[1];
 
-    
-  });
-  
+    commands(action, query)
+  })
 }
