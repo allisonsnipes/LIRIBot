@@ -3,7 +3,7 @@ require("dotenv").config();
 var fs = require("fs");//allows asychron file systems
 var axios = require("axios");//require usage of axios
 var keys = require("./keys.js");//need keys
-//var moment = require("moment");//need moment.js api for time feature
+var moment = require("moment");//need moment.js api for time feature
 
 //require spotify api packages
 //doesnt matter to use var/const/let use let or const

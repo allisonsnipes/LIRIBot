@@ -1,62 +1,28 @@
 # LIRI Bot
 
-### Overview
+## Overview & Description
 
-In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data. This is my first back-end assignment, although it was challenging, it was very interesting to build.
 
-### Before You Begin
+## Requirements (required node packages)
 
-1. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
+### Node Packages
+1. Dotenv: module that assists with loading variables from files in .env to process.env.
+2. Request: allows the functionality to make http callbacks.
+3. Moment.js: library for manipulating, formatting, and parsing time.
+4. FS: node package already preinstalled
+5. Axios: promise based HTTP client for the browser and node.js
 
-2. Make a new GitHub repository called liri-node-app and clone it to your computer.
-
-3. To retrieve the data that will power this app, you'll need to send requests using the `axios` package to the Bands in Town, Spotify and OMDB APIs. You'll find these Node packages crucial for your assignment.
+### APIs
 
 * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
-
 * [Axios](https://www.npmjs.com/package/axios)
-
-* You'll use Axios to grab data from the [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
-
+* [OMDB API](http://www.omdbapi.com)
+* [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
 * [Moment](https://www.npmjs.com/package/moment)
-
 * [DotEnv](https://www.npmjs.com/package/dotenv)
 
-* If you are having trouble obtaining an API key from Bands in Town you can  use this one .. until they shut us down. `app_id=codingbootcamp`
-
-## Submission Guide
-
-Create and use a standard GitHub repository. As this is a CLI App, it cannot be deployed to GitHub pages or Heroku. This time you'll need to include screenshots, a GIF, and/or a video showing us that you have the app working with no bugs. You can include these screenshots/GIFs or a link to a video in a `README.md` file.
-
-* Include screenshots (or a GIF/Video) of the typical user flow of your application. Make sure to include the use of Spotify, Bands in Town, and OMDB.
-
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers/other developers in the future what you built and why, and to show how it works.
-
-* Because screenshots (and well-written READMEs) are extremely important in the context of GitHub, this will be part of the grading.
-
-If you haven't written a markdown file yet, [click here for a rundown](https://guides.github.com/features/mastering-markdown/), or just take a look at the raw file of these instructions.
-
-### Commits
-
-Having an active and healthy commit history on GitHub is important for your future job search. It is also extremely important for making sure your work is saved in your repository. If something breaks, committing often ensures you are able to go back to a working version of your code.
-
-* Committing often is a signal to employers that you are actively working on your code and learning.
-
-* We use the mantra “commit early and often.”  This means that when you write code that works, add it and commit it!
-
-* Numerous commits allow you to see how your app is progressing and give you a point to revert to if anything goes wrong.
-
-* Be clear and descriptive in your commit messaging.
-
-* When writing a commit message, avoid vague messages like "fixed." Be descriptive so that you and anyone else looking at your repository knows what happened with each commit.
-
-* We would like you to have well over 200 commits by graduation, so commit early and often!
-
-### Submission on BCS
-
-* Please submit the link to the Github Repository!
-
-### Instructions
+## Instructions
 
 1. Navigate to the root of your project and run `npm init -y` &mdash; this will initialize a `package.json` file for your project. The `package.json` file is required for installing third party npm packages and saving their version numbers. If you fail to initialize a `package.json` file, it will be troublesome, and at times almost impossible for anyone else to run your code after cloning your project.
 
