@@ -88,8 +88,13 @@ function spotifyThisSong() {
     }
     let dataArr = response.tracks.items;
 
-    for (i = 0; i < dataArr.length;  i++) {
-
+    for (i = 0; i < dataArr.length; i++) {
+      console.log("----");
+      console.log(`artist: ${response.tracks.items[i].album.artists[0].name}`);
+      console.log(`song: ${response.tracks.items[i].name}`);
+      console.log(`album: ${response.tracks.items[i].album.name}`);
+      console.log(`spotify link: ${response.tracks.items[i].external_urls.spotify}`);
+      console.log("----"); 
     }
 
 
