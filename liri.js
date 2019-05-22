@@ -106,12 +106,12 @@ function spotifyThisSong() {
 function doThis() {
   fs.readFile("random.txt", "utf8", function (err, response) {
     if (err) {
-      console.log(err);
+      return console.log(err);
     }
     var dArray = data.split(",");
     var action = dArray[0]; //take objects from txt file to use as parameters
     var query = dArray[1];
 
     commands(action, query)
-  })
-}
+  });
+};
