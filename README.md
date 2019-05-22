@@ -41,4 +41,8 @@ Allisons-MacBook-Pro:9hw allisonsnipes$ node liri.js spotify-this going bad
 
 3. movie-this
 
+Allisons-MacBook-Pro:9hw allisonsnipes$ node liri.js movie-this RED
+
+![image](https://user-images.githubusercontent.com/22041405/58179203-916a2980-7c5c-11e9-8d86-ed763f3495f2.png)
+
 4.  do-what-it-says
