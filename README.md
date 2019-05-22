@@ -30,7 +30,8 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 Allisons-MacBook-Pro:9hw allisonsnipes$ node liri.js concert-this billie eilish
 
-Screen Shot 2019-05-22 at 6.29.26 AM
+![image](https://user-images.githubusercontent.com/22041405/58178786-ac886980-7c5b-11e9-8a87-558b5bce2ddf.png)
+
 
 2. spotify-this-song
 
