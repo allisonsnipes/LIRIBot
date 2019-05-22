@@ -24,13 +24,15 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 ## Instructions
 
+### Run the LIRI BOT program and type the following commands
 
-9. Make it so liri.js can take in one of the following commands:
+1. concert-this
 
-* `concert-this`
+Allisons-MacBook-Pro:9hw allisonsnipes$ node liri.js concert-this billie eilish
 
-* `spotify-this-song`
 
-* `movie-this`
+2. spotify-this-song
 
-* `do-what-it-says`
+3. movie-this
+
+4.  do-what-it-says
