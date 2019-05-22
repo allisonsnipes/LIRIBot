@@ -35,6 +35,10 @@ Allisons-MacBook-Pro:9hw allisonsnipes$ node liri.js concert-this billie eilish
 
 2. spotify-this-song
 
+Allisons-MacBook-Pro:9hw allisonsnipes$ node liri.js spotify-this going bad
+
+![image](https://user-images.githubusercontent.com/22041405/58179079-4819da00-7c5c-11e9-83d9-a74a605d0301.png)
+
 3. movie-this
 
 4.  do-what-it-says
