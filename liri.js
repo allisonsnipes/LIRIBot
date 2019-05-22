@@ -108,7 +108,7 @@ function doThis() {
     if (err) {
       return console.log(err);
     }
-    var dArray = data.split(",");
+    var dArray = response.split(",");
     var action = dArray[0]; //take objects from txt file to use as parameters
     var query = dArray[1];
 
